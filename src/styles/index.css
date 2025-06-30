@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.contact-us {
+  margin-top: 3rem;
+}
+
+.contact-us > h2 {
+  margin-bottom: 1.5rem;
+}
