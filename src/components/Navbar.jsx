@@ -12,6 +12,8 @@ export default function Navbar() {
     { route: "/contactus", displaytext: "Contact Us" },
   ];
 
+  const productsCount = 1;
+
   return (
     <div className={navbarStyles.navbar}>
       <div className={navbarStyles["logo-cont"]}>
@@ -45,7 +47,9 @@ export default function Navbar() {
         </nav>
         <button className={navbarStyles.cartbtn}>
           <img src={cartLogo} />
-          <span>{2}</span>
+          {productsCount ? (
+            <span>{productsCount > 9 ? "9+" : productsCount}</span>
+          ) : null}
         </button>
       </div>
     </div>
