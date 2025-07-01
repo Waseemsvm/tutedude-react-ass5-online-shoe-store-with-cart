@@ -17,7 +17,7 @@ export default function CatalogueItem(props) {
           <p>{item.price}</p>
         </div>
         <div>
-          <button>Add to Cart</button>
+          <button className={catalogueStyles["add-to-cart"]}>Add to Cart</button>
         </div>
       </form>
     </div>

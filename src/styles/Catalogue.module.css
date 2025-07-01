@@ -57,6 +57,7 @@
   /* background-color: yellow; */
   height: 25rem;
 }
+
 .catalogue-item {
   display: flex;
   flex-direction: column;
@@ -112,4 +113,21 @@
   height: 0.5rem;
   display: inline-block;
   margin-right: 0.25rem;
+}
+
+.add-to-cart {
+  margin-right: 1rem;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 10%;
+  background-color: #e2dada;
+}
+
+.add-to-cart:hover {
+  background-color: #afa9a9;
+  cursor: pointer;
+}
+
+.add-to-cart:active {
+  outline: 0.2px solid black;
 }
