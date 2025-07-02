@@ -1,7 +1,7 @@
 const products = [
   {
     id: "prod1",
-    url: "/src/assets/products/pic1.jpg",
+    url: "/products/pic1.jpg",
     text: "Black Sneakers",
     description: "",
     quantity: 0,
@@ -9,7 +9,7 @@ const products = [
   },
   {
     id: "prod2",
-    url: "/src/assets/products/pic2.jpg",
+    url: "/products/pic2.jpg",
     text: "Black Shoes",
     description: "",
     quantity: 0,
@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: "prod3",
-    url: "/src/assets/products/pic3.jpg",
+    url: "/products/pic3.jpg",
     text: "Brown Shoes",
     description: "",
     quantity: 0,
@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: "prod4",
-    url: "/src/assets/products/pic4.jpg",
+    url: "/products/pic4.jpg",
     text: "Brown-White Shoes",
     description: "",
     quantity: 0,
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: "prod5",
-    url: "/src/assets/products/pic5.jpg",
+    url: "/products/pic5.jpg",
     text: "Cream-White Ladies Shoes",
     description: "",
     quantity: 0,
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: "prod6",
-    url: "/src/assets/products/pic6.jpg",
+    url: "/products/pic6.jpg",
     text: "Fancy Shoes",
     description: "",
     quantity: 0,
@@ -49,7 +49,7 @@ const products = [
   },
   {
     id: "prod7",
-    url: "/src/assets/products/pic7.jpg",
+    url: "/products/pic7.jpg",
     text: "Branded Yellow Shoes",
     description: "",
     quantity: 0,
@@ -57,7 +57,7 @@ const products = [
   },
   {
     id: "prod8",
-    url: "/src/assets/products/pic8.jpg",
+    url: "/products/pic8.jpg",
     text: "Grey Shoes",
     description: "",
     quantity: 0,
@@ -65,7 +65,7 @@ const products = [
   },
   {
     id: "prod9",
-    url: "/src/assets/products/pic9.jpg",
+    url: "/products/pic9.jpg",
     text: "Brown Sandals",
     description: "",
     quantity: 0,
@@ -73,7 +73,7 @@ const products = [
   },
   {
     id: "prod10",
-    url: "/src/assets/products/pic10.jpg",
+    url: "/products/pic10.jpg",
     text: "Red Shoes",
     description: "",
     quantity: 0,
@@ -81,7 +81,7 @@ const products = [
   },
   {
     id: "prod11",
-    url: "/src/assets/products/pic11.jpg",
+    url: "/products/pic11.jpg",
     text: "White Ladies Sandals",
     description: "",
     quantity: 0,
@@ -89,7 +89,7 @@ const products = [
   },
   {
     id: "prod12",
-    url: "/src/assets/products/pic12.jpg",
+    url: "/products/pic12.jpg",
     text: "Blue Jeans Shoes",
     description: "",
     quantity: 0,
@@ -97,7 +97,7 @@ const products = [
   },
   {
     id: "prod13",
-    url: "/src/assets/products/pic13.jpg",
+    url: "/products/pic13.jpg",
     text: "Brown Sneakers",
     description: "",
     quantity: 0,
