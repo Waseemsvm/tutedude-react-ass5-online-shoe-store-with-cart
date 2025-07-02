@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router";
 import navbarStyles from "../styles/Navbar.module.css";
 import logo from "../assets/logos/logo.png";
-import cartLogo from "../assets/symbols/cart-icon.svg";
 import hamMenu from "../assets/symbols/ham-menu.svg";
+import CartBtn from "./CartBtn";
 
 export default function Navbar() {
   const links = [
@@ -12,7 +12,6 @@ export default function Navbar() {
     { route: "/contactus", displaytext: "Contact Us" },
   ];
 
-  const productsCount = 1;
 
   return (
     <div className={navbarStyles.navbar}>
@@ -45,12 +44,7 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
-        <button className={navbarStyles.cartbtn}>
-          <img src={cartLogo} />
-          {productsCount ? (
-            <span>{productsCount > 9 ? "9+" : productsCount}</span>
-          ) : null}
-        </button>
+        <CartBtn />
       </div>
     </div>
   );

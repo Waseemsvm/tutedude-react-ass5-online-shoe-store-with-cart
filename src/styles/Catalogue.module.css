@@ -115,12 +115,14 @@
   margin-right: 0.25rem;
 }
 
-.add-to-cart {
+.add-to-cart,
+.step-counter {
   margin-right: 1rem;
   border: none;
   padding: 0.25rem;
   border-radius: 10%;
   background-color: #e2dada;
+  height: 2.5rem;
 }
 
 .add-to-cart:hover {
@@ -130,4 +132,36 @@
 
 .add-to-cart:active {
   outline: 0.2px solid black;
+}
+
+.step-counter {
+  display: flex;
+  align-items: center;
+}
+
+.step-counter span {
+  margin: 0 0.5rem;
+}
+
+.step-counter button {
+  flex: auto;
+  width: 2rem;
+  border: none;
+}
+
+.step-counter button {
+  background-color: #b6acac;
+  border-radius: 10%;
+}
+
+.step-counter button:hover {
+  background-color: #afa9a9;
+}
+
+.step-counter button:active:not([disabled]) {
+  outline: 0.2px solid black;
+}
+
+.step-counter button[disabled] {
+  cursor: not-allowed;
 }
