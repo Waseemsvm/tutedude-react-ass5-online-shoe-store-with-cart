@@ -6,11 +6,6 @@ import { useState } from "react";
 import StepCounterButton from "./StepCounterButton";
 
 function CatalogueItem({ item, cartItems }) {
-  // const { item, cartItems } = props;
-  // const { cartItems, item } = props;
-
-  // const mCartItems = cartItems.reduce((i) => (i[id] = i), {});
-
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => {
     return state.products.find((product) => product.id == item.id);
@@ -18,28 +13,9 @@ function CatalogueItem({ item, cartItems }) {
 
   const inCart = !!cartItems.find((i) => i.id == cartItem.id);
 
-  // const [inCart, setInCart] = useState(
-  //   !!cartItems.find((i) => i.id == cartItem.id)
-  // );
-
-  // const [count, setCount] = useState(
-  //   cartItems.reduce((acc, i) => (acc += i.quantity), 0)
-  // );
-
-  // const updateItem = () => {
-  //   setInCart(!!cartItems.find((i) => i.id == item.id));
-  //   setCount(cartItems.reduce((acc, i) => (acc += i.quantity), 0));
-  // };
-
   const onAddToCart = (e) => {
     e.preventDefault();
   };
-
-  // const onIncrement = () => {
-  //   dispatch(addToCart({}));
-  //   // updateItem();
-  // };
-  // const onDecrement = () => {};
 
   return (
     <li>
@@ -61,7 +37,6 @@ function CatalogueItem({ item, cartItems }) {
                 className={catalogueStyles["add-to-cart"]}
                 onClick={(e) => {
                   dispatch(addItem(cartItem.id));
-                  // updateItem();
                 }}
               >
                 Add to Cart
