@@ -2,6 +2,7 @@ import { connect, useSelector } from "react-redux";
 import "../styles/Cart.css";
 import closeIcon from "../assets/symbols/close-icon.svg";
 import { useCart } from "./CartContext";
+import CartItem from "./CartItem";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cartItems);
@@ -12,7 +13,7 @@ function Cart() {
       <div className={"overlay"}></div>
       <div className={`modal ${isCartOpen ? "cart-open" : ""}`}>
         <div className="cart-toolbar">
-          <h1>Cart ({count}) </h1>
+          <h1>Cart {!!cartItems.length && count} </h1>
 
           <button
             className="close-btn"
@@ -23,12 +24,16 @@ function Cart() {
             <img src={closeIcon} />
           </button>
         </div>
-        <div className="cart-body">
-          <ul>
-            {cartItems.map((item) => (
-              <li key={item.id}>{`${item.text} x${item.quantity}`}</li>
-            ))}
-          </ul>
+        <div className={`cart-body ${cartItems.length ? "" : "empty"}`}>
+          {cartItems.length ? (
+            <ul>
+              {cartItems.map((item) => (
+                <CartItem key={item.id} item={item} />
+              ))}
+            </ul>
+          ) : (
+            <h1>Cart is Empty</h1>
+          )}
         </div>
       </div>
     </>
@@ -41,7 +46,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (state) => {
-  // return {};
-};
 export default connect(mapStateToProps)(Cart);

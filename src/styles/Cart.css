@@ -41,6 +41,7 @@
 
 .cart-body {
   flex: auto;
+  overflow-y: auto;
 }
 
 .cart-toolbar {
@@ -65,23 +66,29 @@
   cursor: pointer;
 }
 
+.cart-body.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 576px) {
   .modal.cart-open {
     width: 60rem;
-    height: 60rem;
+    height: 65%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .modal.cart-open {
-    width: 40rem;
-    height: 60rem;
+    width: 80%;
+    height: 65%;
   }
 }
 @media screen and (min-width: 768px) {
   .modal.cart-open {
     width: 80%;
-    height: 60rem;
+    height: 65%;
   }
 }
 
@@ -102,4 +109,22 @@
   .close-btn {
     display: none;
   }
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item .item-details {
+  display: flex;
+}
+
+.cart-item img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.item-quantity{
+  margin-left: 2rem;
 }
