@@ -61,8 +61,28 @@
   width: 2rem;
 }
 
-.close-btn{
+.close-btn {
   cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .modal.cart-open {
+    width: 60rem;
+    height: 60rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal.cart-open {
+    width: 40rem;
+    height: 60rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal.cart-open {
+    width: 80%;
+    height: 60rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -79,7 +99,7 @@
     border-radius: 0;
   }
 
-  .close-btn{
+  .close-btn {
     display: none;
   }
 }
