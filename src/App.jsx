@@ -4,12 +4,16 @@ import appStyles from "./styles/App.module.css";
 import { Provider } from "react-redux";
 import catalogueStore from "./app_state/store/catalogueStore";
 
+import { CartProvider } from "./components/CartContext";
+
 function App() {
   return (
     <div className={appStyles.app}>
       <BrowserRouter>
         <Provider store={catalogueStore}>
-          <Layout />
+          <CartProvider>
+            <Layout />
+          </CartProvider>
         </Provider>
       </BrowserRouter>
     </div>
