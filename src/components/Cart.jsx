@@ -7,13 +7,15 @@ import CartItem from "./CartItem";
 function Cart() {
   const cartItems = useSelector((state) => state.cartItems);
   const count = cartItems.reduce((o, i) => (o += i.quantity), 0);
+  const totalPrice = cartItems.reduce((o, i) => o + i.quantity * i.price, 0);
+
   const { isCartOpen, closeCart } = useCart();
   return (
     <>
       <div className={"overlay"}></div>
       <div className={`modal ${isCartOpen ? "cart-open" : ""}`}>
         <div className="cart-toolbar">
-          <h1>Cart {!!cartItems.length && count} </h1>
+          <h1>Cart {!!cartItems.length && `( ${count} )`} </h1>
 
           <button
             className="close-btn"
@@ -34,6 +36,10 @@ function Cart() {
           ) : (
             <h1>Cart is Empty</h1>
           )}
+        </div>
+        <div className="cart-footer">
+          <p>Total: {totalPrice}</p>
+          <button disabled={!cartItems.length}>checkout</button>
         </div>
       </div>
     </>

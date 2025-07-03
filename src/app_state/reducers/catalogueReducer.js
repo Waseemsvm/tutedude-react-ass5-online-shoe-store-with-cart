@@ -132,6 +132,11 @@ const catalogueReducer = (state = initialState, action) => {
         cartItems.findIndex((c) => c.id == cartItem.id),
         1
       );
+  } else if (action.type == DELETE_FROM_CART) {
+    cartItems.splice(
+      cartItems.findIndex((c) => c.id == cartItem.id),
+      1
+    );
   }
   return {
     ...state,
@@ -141,6 +146,7 @@ const catalogueReducer = (state = initialState, action) => {
 
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const DELETE_FROM_CART = "DELETE_FROM_CART";
 
 export const addItem = (id) => {
   return {
@@ -152,6 +158,13 @@ export const addItem = (id) => {
 export const removeItem = (id) => {
   return {
     type: REMOVE_FROM_CART,
+    id: id,
+  };
+};
+
+export const deleteItem = (id) => {
+  return {
+    type: DELETE_FROM_CART,
     id: id,
   };
 };
