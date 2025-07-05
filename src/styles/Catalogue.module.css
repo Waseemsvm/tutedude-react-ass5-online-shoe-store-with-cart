@@ -23,11 +23,26 @@
   outline: 1px solid slategrey;
 }
 
+.no-products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 576px) {
   .products-container {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .toolbar input{
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .products-container {
     grid-template-columns: 1fr 1fr 1fr;

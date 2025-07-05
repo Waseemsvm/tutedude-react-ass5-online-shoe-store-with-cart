@@ -13,7 +13,7 @@ function Cart() {
   return (
     <>
       <div className={"overlay"}></div>
-      <div className={`modal ${isCartOpen ? "cart-open" : ""}`}>
+      <div className={`modal ${isCartOpen ? "open" : ""}`}>
         <div className="cart-toolbar">
           <h1>Cart {!!cartItems.length && `( ${count} )`} </h1>
 
