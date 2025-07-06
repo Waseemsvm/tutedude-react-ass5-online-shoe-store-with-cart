@@ -6,7 +6,7 @@ import { useCart } from "../components/CartContext";
 function CartBtn(props) {
   const cartItems = useSelector((state) => state.cartItems);
   const productsCount = cartItems.reduce((a, i) => (a += i.quantity), 0);
-  const { openCart, isCartOpen, toggleCart } = useCart();
+  const { isCartOpen, toggleCart } = useCart();
 
   return (
     <button
@@ -17,7 +17,9 @@ function CartBtn(props) {
     >
       <img src={isCartOpen ? closeIcon : cartLogo} />
       {productsCount ? (
-        <span>{productsCount > 9 ? "9+" : productsCount}</span>
+        <span className={isCartOpen ? navbarStyles.hide : ""}>
+          {productsCount > 9 ? "9+" : productsCount}
+        </span>
       ) : null}
     </button>
   );

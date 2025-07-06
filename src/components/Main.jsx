@@ -6,6 +6,7 @@ import AboutUs from "./AboutUs";
 import { Route, Routes } from "react-router";
 import NotfoundPage from "./NotfoundPage";
 import Cart from "./Cart";
+import MessageToast from "./MessageToast";
 export default function Main() {
   return (
     <div className={`${mainStyles.main} main-div`}>
@@ -17,6 +18,7 @@ export default function Main() {
         <Route path="*" element={<NotfoundPage />} />
       </Routes>
       <Cart />
+      <MessageToast />
     </div>
   );
 }

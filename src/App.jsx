@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import catalogueStore from "./app_state/store/catalogueStore";
 
 import { CartProvider } from "./components/CartContext";
+import { MessageToastProvider } from "./components/MessageToastContext";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <BrowserRouter>
         <Provider store={catalogueStore}>
           <CartProvider>
-            <Layout />
+            <MessageToastProvider>
+              <Layout />
+            </MessageToastProvider>
           </CartProvider>
         </Provider>
       </BrowserRouter>
