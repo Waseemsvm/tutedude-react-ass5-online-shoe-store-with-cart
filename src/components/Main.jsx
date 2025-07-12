@@ -5,20 +5,21 @@ import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import { Route, Routes } from "react-router";
 import NotfoundPage from "./NotfoundPage";
-import Cart from "./Cart";
-import MessageToast from "./MessageToast";
+import CataloguePageLayout from "../layouts/CataloguePageLayout";
+import CheckoutPage from "./CheckoutPage";
 export default function Main() {
   return (
     <div className={`${mainStyles.main} main-div`}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/catalogue" element={<Catalogue />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="catalogue" element={<CataloguePageLayout />}>
+          <Route path="" element={<Catalogue />} />
+          <Route path="checkout" element={<CheckoutPage />} />
+        </Route>
+        <Route path="contactus" element={<ContactUs />} />
+        <Route path="aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotfoundPage />} />
       </Routes>
-      <Cart />
-      <MessageToast />
     </div>
   );
 }

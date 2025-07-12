@@ -65,7 +65,7 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
-        <CartBtn />
+        {/* <CartBtn /> */}
       </div>
     </div>
   );

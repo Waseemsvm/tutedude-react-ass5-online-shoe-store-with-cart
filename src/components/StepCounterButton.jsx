@@ -8,7 +8,7 @@ export default function StepCounterButton({ id }) {
     return state.cartItems.find((i) => i.id == id)?.quantity ?? 0;
   });
   return (
-    <div className={catalogueStyles["step-counter"]}>
+    <div className={`${catalogueStyles["step-counter"]}`}>
       <button
         onClick={() => {
           dispatch(removeItem(id));

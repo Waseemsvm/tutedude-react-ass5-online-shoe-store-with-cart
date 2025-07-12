@@ -5,6 +5,7 @@
 
 .catalogue-container {
   height: calc(100% - 5rem);
+  margin-top: 5rem;
 }
 
 .products-container {

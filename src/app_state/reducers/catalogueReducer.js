@@ -146,6 +146,8 @@ const catalogueReducer = (state = initialState, action) => {
           p.text?.toLowerCase().includes(action.value.toLowerCase())
         )
       : allProducts;
+  } else if (action.type == RESET_CART) {
+    cartItems = [];
   }
 
   if (action.type == CHECKOUT_OPEN) isCheckoutOpen = action.value;
@@ -163,6 +165,7 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const DELETE_FROM_CART = "DELETE_FROM_CART";
 export const FILTER_PRODUCTS = "FILTER_PRODUCTS";
 export const CHECKOUT_OPEN = "CHECKOUT_OPEN";
+export const RESET_CART = "RESET_CART";
 
 export const addItem = (id) => {
   return {
@@ -196,6 +199,12 @@ export const setCheckout = (value) => {
   return {
     type: CHECKOUT_OPEN,
     value: value,
+  };
+};
+
+export const resetCart = () => {
+  return {
+    type: RESET_CART,
   };
 };
 
