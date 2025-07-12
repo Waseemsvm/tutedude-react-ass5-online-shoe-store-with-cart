@@ -71,4 +71,8 @@
   .form {
     padding: 1rem;
   }
+
+  .form-payment-opts {
+    flex-direction: column;
+  }
 }

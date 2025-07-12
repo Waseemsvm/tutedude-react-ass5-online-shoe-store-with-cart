@@ -9,9 +9,8 @@ function CartPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const cartItems = useSelector((state) => state.cartItems);
-  const count = cartItems.reduce((o, i) => (o += i.quantity), 0);
+  // const count = cartItems.reduce((o, i) => (o += i.quantity), 0);
   const totalPrice = cartItems.reduce((o, i) => o + i.quantity * i.price, 0);
-  const dispatch = useDispatch();
   return (
     <div className={CartStyles["cart-page"]}>
       <h2>My Cart</h2>
