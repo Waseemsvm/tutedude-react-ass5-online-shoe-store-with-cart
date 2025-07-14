@@ -12,11 +12,11 @@ function App() {
     <div className={appStyles.app}>
       <BrowserRouter>
         <Provider store={catalogueStore}>
-          <CartProvider>
-            <MessageToastProvider>
-              <Layout />
-            </MessageToastProvider>
-          </CartProvider>
+          {/* <CartProvider> */}
+          <MessageToastProvider>
+            <Layout />
+          </MessageToastProvider>
+          {/* </CartProvider> */}
         </Provider>
       </BrowserRouter>
     </div>

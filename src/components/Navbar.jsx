@@ -3,9 +3,9 @@ import navbarStyles from "../styles/Navbar.module.css";
 import logo from "../assets/logos/logo.png";
 import hamMenu from "../assets/symbols/ham-menu.svg";
 import closeIcon from "../assets/symbols/close-icon.svg";
-import CartBtn from "./CartBtn";
+// import CartBtn from "./CartBtn";
 import { useState } from "react";
-import { useCart } from "./CartContext";
+// import { useCart } from "./CartContext";
 
 export default function Navbar() {
   const links = [
@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   const [open, setOpen] = useState(false);
-  const { isCartOpen } = useCart();
+  // const { isCartOpen } = useCart();
 
   const onClickMenu = (e) => {
     setOpen(!open);
@@ -26,9 +26,8 @@ export default function Navbar() {
     <div className={navbarStyles.navbar}>
       <div className={navbarStyles["logo-cont"]}>
         <button
-          className={`${navbarStyles.menuBtn} ${open ? "open" : "close"} ${
-            isCartOpen ? navbarStyles["cart-open"] : ""
-          }`}
+          // className={`${navbarStyles.menuBtn} ${open ? "open" : "close"} ${
+          className={`${navbarStyles.menuBtn}`}
           onClick={onClickMenu}
         >
           <img src={open ? closeIcon : hamMenu} />
@@ -37,11 +36,12 @@ export default function Navbar() {
         <p>Online Shoe Store</p>
       </div>
       <div className={navbarStyles.endContent}>
-        <nav
+        {/* <nav
           className={`${open ? navbarStyles.open : ""} ${
             isCartOpen ? navbarStyles["cart-open"] : ""
           }`}
-        >
+        > */}
+        <nav>
           <ul className={navbarStyles.navItems}>
             {links.map((link) => (
               <li key={link.route}>

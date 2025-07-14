@@ -2,7 +2,7 @@ import { useState } from "react";
 import CheckoutPageStyle from "../styles/CheckoutPage.module.css";
 import { useNavigate } from "react-router";
 import { connect, useDispatch } from "react-redux";
-import { resetCart } from "../app_state/reducers/catalogueReducer";
+import { resetCart, filterItems } from "../app_state/reducers/catalogueReducer";
 
 function CheckoutPage() {
   const [paymentMode, setPaymentMode] = useState("cod");
@@ -59,6 +59,7 @@ function CheckoutPage() {
           className={CheckoutPageStyle["order-btn"]}
           onClick={() => {
             dispatch(resetCart());
+            dispatch(filterItems());
             navigate("/catalogue");
           }}
         >
@@ -72,6 +73,7 @@ function CheckoutPage() {
 const mapDispatchToProps = () => {
   return {
     resetCart: resetCart,
+    filterItems: filterItems,
   };
 };
 

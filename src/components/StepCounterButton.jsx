@@ -18,7 +18,7 @@ export default function StepCounterButton({ id }) {
       </button>
       <span>{count}</span>
       <button
-        disabled={count > 4}
+        // disabled={count > 4}
         onClick={() => {
           dispatch(addItem(id));
         }}
