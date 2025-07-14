@@ -41,7 +41,7 @@ export default function Navbar() {
             isCartOpen ? navbarStyles["cart-open"] : ""
           }`}
         > */}
-        <nav>
+        <nav className={`${open ? navbarStyles.open : ""}`}>
           <ul className={navbarStyles.navItems}>
             {links.map((link) => (
               <li key={link.route}>
