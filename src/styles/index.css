@@ -19,3 +19,44 @@ body,
 .contact-us > h2 {
   margin-bottom: 1.5rem;
 }
+
+.about-us-cont,
+.contact-us-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.about-us,
+.contact-us {
+  max-width: 50rem;
+  text-align: justify;
+}
+
+.about-us h2,
+.contact-us h2 {
+  margin: 2rem 0;
+  color: rgb(69, 68, 68);
+  text-decoration: underline;
+}
+
+.offerings {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: rgb(69, 68, 68);
+}
+
+.contact-us ul li,
+.about-us ul li {
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* .about-us-cont{
+      padding: 2rem;
+      overflow-y: auto;
+    } */
+}

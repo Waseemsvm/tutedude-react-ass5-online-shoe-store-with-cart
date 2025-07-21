@@ -1,9 +1,9 @@
 .homepage {
   height: calc(100%);
-  background-image: url("../assets/products/homepage.jpg");
+  background-image: url("../assets/products/homepage1.jpg");
   background-position: center;
-  background-size: cover;
-  opacity: 0.8;
+  background-size: 100% 100%;
+  /* opacity: 0.5; */
   position: relative;
 }
 
@@ -20,5 +20,21 @@
 
 .homepage-text > span {
   font-size: 3rem;
-  font-weight: bold ;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    /* min-width: 768px; */
+    height: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .homepage {
+    background-image: url("../assets/products/homepage_mobile.png");
+    /* height: 100%;
+    width: auto;
+    background-size: cover;
+    background-position-x: right; */
+  }
 }
