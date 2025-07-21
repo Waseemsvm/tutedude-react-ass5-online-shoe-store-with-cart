@@ -6,6 +6,10 @@
   height: 25rem;
 }
 
+.cart-page:has(.cart-empty) {
+  height: auto;
+}
+
 .cart-page h2 {
   margin: 1rem;
 }
@@ -46,6 +50,12 @@
   .cart-items {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@media screen and (max-width: 576px) {
+    .cart-page:has(.cart-empty) +div{
+      margin-top: 0;
+    }
 }
 
 /* .cart-items::-webkit-scrollbar, .cart-items::-webkit-scrollbar-track, .cart-items::-webkit-scrollbar-thumb, .cart-items::-webkit-scrollbar-button{
