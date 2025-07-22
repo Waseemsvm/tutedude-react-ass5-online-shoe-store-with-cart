@@ -1,4 +1,6 @@
+import { Link } from "react-router";
 import homepageStyles from "../styles/Homepage.module.css";
+import truckIcon from "../assets/symbols/truck.svg";
 export default function HomePage() {
   return (
     <>
@@ -46,6 +48,24 @@ export default function HomePage() {
           </p>
           <span className="author">— Nisha R., Mumbai</span>
         </div>
+      </div>
+      <div className="loc">
+        <img src={truckIcon} alt="truck-icon" />
+        <p>
+          We now ship over 200 locations worldwide <br />
+          <strong>
+            Shop your favorite brands &amp; send to friends &amp; family around
+            the globe
+          </strong>
+        </p>
+      </div>
+      <div className="footer">
+        <nav>
+          <Link to="/catalogue">Catalogue</Link>
+          <Link to="/aboutus">About Us</Link>
+          <Link to="/contactus">Contact Us</Link>
+        </nav>
+        <div className="copy">@Copyright Waseem Akram P</div>
       </div>
     </>
   );
